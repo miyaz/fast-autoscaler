@@ -101,7 +101,7 @@ DesiredCount(new): 10
     -> 一定周期での`/nginx-status`チェックを継続
 
 下記イメージ  
-![fastAutoscaler](https://raw.github.com/senbazuru/fast-autoscaler/master/fastAutoScaler.png)
+![fastAutoscaler](https://raw.github.com/miyaz/fast-autoscaler/master/fastAutoScaler.png)
 
 ## コンテナイメージ更新手順
 
@@ -155,7 +155,7 @@ Fargateのタスクロールに指定するIAMロールを作成します。
 - タスク定義作成
   - タスク定義名：fast-autoscaler
   - コンテナイメージURLに下記を指定  
-    ghcr.io/senbazuru/fast-autoscaler:latest
+    ghcr.io/miyaz/fast-autoscaler:latest
   - CPU/Memoryの割り当ては最小値でOK
   - タスク数は1でOK
 - ECSクラスタ／サービス作成
@@ -166,5 +166,5 @@ Fargateのタスクロールに指定するIAMロールを作成します。
 ### おまけ（ローカル簡易実行）
 
 ```
-docker run -v ~/.aws:/root/.aws ghcr.io/senbazuru/fast-autoscaler
+docker run -v ~/.aws:/root/.aws ghcr.io/miyaz/fast-autoscaler
 ```
